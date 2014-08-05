@@ -30,7 +30,7 @@ matrix:
 # Successful builds are archived and uploaded to S3 for regression testing.
 before_deploy:
   - cd ${TRAVIS_BUILD_DIR}
-  - python${PY_VER} setup.py sdist
+  - python${PY_VER} setup.py bdist
 
 deploy:
   provider: s3
